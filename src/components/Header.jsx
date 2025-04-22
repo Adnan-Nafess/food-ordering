@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isLogin, setIsLogin] = useState("Login");
@@ -23,16 +24,16 @@ const Header = () => {
         <nav>
           <ul className="flex gap-3 md:gap-5 text-sm md:text-base font-medium items-center">
             <li className="cursor-pointer hover:text-orange-500 transition duration-200">
-              Home
+              <Link to="/">Home</Link>
             </li>
             <li className="cursor-pointer hover:text-orange-500 transition duration-200">
-              About
+              <Link to="/about">About</Link>
             </li>
             <li className="cursor-pointer hover:text-orange-500 transition duration-200">
-              Contact
+              <Link to="/contact">Contact</Link>
             </li>
             <li className="cursor-pointer hover:text-orange-500 transition duration-200 flex items-center gap-1">
-              <span>Cart</span>
+              <Link to="cart"><span>Cart</span></Link>
               {/* <ShoppingCart className="w-4 h-4" /> */}
             </li>
             <button
